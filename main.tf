@@ -78,8 +78,8 @@ resource "azurerm_virtual_machine_extension" "main" {
 
   settings = <<SETTINGS
     {
-        "fileUris": [ "https://raw.githubusercontent.com/wkdang/LVM-SAPHANA-NAKISA/master/scripts/Terraform_ansible.sh" ],
-        "commandToExecute": "[concat('sh Terraform_ansible.sh ', parameters('customUri'), ' ' , parameters('vmUserName'))]"
+        "fileUris": [ "https://raw.githubusercontent.com/wkdang/Terraform/master/Terraform_ansible.sh" ],
+        "commandToExecute": "[concat('sh Terraform_ansible.sh ', '5c867415-9d26-445f-9a75-9bc80347d771' , ' ' , ${var.prefix})]"
     }
 SETTINGS
 
