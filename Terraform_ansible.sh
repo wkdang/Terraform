@@ -4,7 +4,14 @@
 Var_SubscriptionId='5c867415-9d26-445f-9a75-9bc80347d771'
 Var_github='https://github.com/wkdang/sap-hana.git'
 Var_SubscriptionId=$1
-Var_github=$2
+Var_ClientId=$2
+Var_Secret=$3
+Var_TenantId=$4
+
+echo $1 >> /tmp/parameter.txt
+echo $2 >> /tmp/parameter.txt
+echo $3 >> /tmp/parameter.txt
+echo $4 >> /tmp/parameter.txt
 
 echo "Début installation Prérequis" >> /tmp/parameter.txt
 #Installation du gestionnaire de paquets PIP (python-pip)
@@ -63,7 +70,7 @@ echo "Fin installation SPN" >> /tmp/parameter.txt
 
 # Création de la clé SSH
 echo "Début installation clé SSH" >> /tmp/parameter.txt
-ssh-keygen -o -f ~/.ssh/id_rsa -N '' -y
+ssh-keygen -o -f ~/.ssh/id_rsa -N ''
 echo "Fin installation clé SSH" >> /tmp/parameter.txt
 
 echo "Début Copie Github" >> /tmp/parameter.txt
