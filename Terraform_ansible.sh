@@ -4,14 +4,16 @@
 Var_SubscriptionId='5c867415-9d26-445f-9a75-9bc80347d771'
 Var_github='https://github.com/wkdang/sap-hana.git'
 Var_SubscriptionId=$1
-Var_ClientId=$2
-Var_Secret=$3
-Var_TenantId=$4
+Var_AppId=$2
+Var_ClientId=$3
+Var_Secret=$4
+Var_TenantId=$5
 
 echo $1 >> /tmp/parameter.txt
 echo $2 >> /tmp/parameter.txt
 echo $3 >> /tmp/parameter.txt
 echo $4 >> /tmp/parameter.txt
+echo $5 >> /tmp/parameter.txt
 
 echo "Début installation Prérequis" >> /tmp/parameter.txt
 #Installation du gestionnaire de paquets PIP (python-pip)
